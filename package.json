@@ -1,0 +1,16 @@
+{
+    "name": "garden_app_project",
+    "version": "1.0.0",
+    "description": "Group 36 Garden App project for CPSC304.",
+    "main": "server.js",
+    "keywords": [],
+    "author": {
+        "name": "Poppy Li, Jessie Zhou, Trevor Dang"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^5.3.3",
+        "express": "^4.17.3",
+        "oracledb": "^5.2.0"
+    }
+}

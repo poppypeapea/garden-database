@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Garden App</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+  </div>
+  <!-- Spinner End -->
+
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <h1 class="m-0">Garden</h1>
+    </a>
+    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="/" class="nav-item nav-link active">Home</a>
+        <a href="user.html" class="nav-item nav-link">Users</a>
+        <a href="garden.html" class="nav-item nav-link">Gardens</a>
+        <a href="plant.html" class="nav-item nav-link">Plants</a>
+        <a href="water.html" class="nav-item nav-link">Water</a>
+        <a href="harvest.html" class="nav-item nav-link">Harvest</a>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <style>
+    .carousel-item {
+        height: 800px; /* Set a fixed height for the carousel items */
+    }
+
+    .carousel-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; /* Ensure images cover the container without distortion */
+    }
+</style>
+
+  <body>
+    <!-- Carousel Start -->
+    <div class="container-fluid px-0 mb-5">
+      <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="w-100" src="img/carousel_1.png" alt="Image">
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row justify-content-start">
+                  <div class="col-lg-8 text-start">
+                    <p class="fs-4 text-white">Welcome to our garden</p>
+                    <h1 class="display-1 text-white mb-5 animated slideInRight">Home to Vibrant Plants</h1>
+                    <a href="#product" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInRight">Explore
+                      More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="w-100" src="img/carousel_2.png" alt="Image">
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row justify-content-end">
+                  <div class="col-lg-8 text-end">
+                    <p class="fs-4 text-white">Welcome to our garden</p>
+                    <h1 class="display-1 text-white mb-5 animated slideInRight">Best Organic Products</h1>
+                    <a href="#product" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInLeft">Explore
+                      More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="w-100" src="img/carousel_3.png" alt="Image">
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row justify-content-end">
+                  <div class="col-lg-8 text-end">
+                    <p class="fs-4 text-white">Welcome to our garden</p>
+                    <h1 class="display-1 text-white mb-5 animated slideInRight">Best Organic Products</h1>
+                    <a href="#product" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInLeft">Explore
+                      More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- Carousel End -->
+
+  <!-- About Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5 align-items-end">
+        <div class="col-lg-6">
+          <div class="row g-2">
+            <div class="col-6 position-relative wow fadeIn" data-wow-delay="0.7s">
+              <div class="about-experience bg-secondary rounded">
+                <h1 class="display-1 mb-0">20</h1>
+                <small class="fs-5 fw-bold">Years Gardening</small>
+              </div>
+            </div>
+            <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
+              <img class="img-fluid rounded" src="img/veg.jpg" alt="Vegetable Garden">
+            </div>
+            <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
+              <img class="img-fluid rounded" src="img/water.jpg" alt="Flower Garden">
+            </div>
+            <div class="col-6 wow fadeIn" data-wow-delay="0.5s">
+              <img class="img-fluid rounded" src="img/fruits.webp" alt="Herb Garden">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <p class="section-title bg-white text-start text-primary pe-3">About Us</p>
+          <h1 class="mb-4">Learn About Our Personal Garden & Journey</h1>
+          <p class="mb-4">For two decades, we have dedicated ourselves to cultivating a thriving garden filled
+            with vibrant vegetables, beautiful flowers, and aromatic herbs. Our passion for gardening has
+            grown into a lifestyle that brings joy and sustenance to our family and friends.</p>
+          <div class="row g-5 pt-2 mb-5">
+            <div class="col-sm-6">
+              <img class="img-fluid mb-4" src="img/service.png" alt="">
+              <h5 class="mb-3">Expert Gardening Tips</h5>
+              <span>We offer expert tips on how to grow your own vegetables, flowers, and herbs
+                successfully.</span>
+            </div>
+            <div class="col-sm-6">
+              <img class="img-fluid mb-4" src="img/product.png" alt="">
+              <h5 class="mb-3">Organic Practices</h5>
+              <span>Our garden thrives on organic practices, ensuring the best for our plants and the
+                environment.</span>
+            </div>
+          </div>
+          <!-- <a class="btn btn-secondary rounded-pill py-3 px-5" href="">Explore More</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About End -->
+
+  <!-- Features Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <p class="section-title bg-white text-start text-primary pe-3">Why Us!</p>
+          <h1 class="mb-4">Few Reasons Why Our Garden is Special!</h1>
+          <p class="mb-4">Our personal garden has been a source of joy and sustenance for our household. With
+            a variety of vegetables, flowers, and herbs, it reflects our dedication and passion for
+            gardening.</p>
+          <p><i class="fa fa-check text-primary me-3"></i>6 Household Members</p>
+          <p><i class="fa fa-check text-primary me-3"></i>17 Different Plants</p>
+          <p><i class="fa fa-check text-primary me-3"></i>6 Unique Gardens</p>
+          <p><i class="fa fa-check text-primary me-3"></i>Abundant Harvests Throughout the Year</p>
+          <!-- <a class="btn btn-secondary rounded-pill py-3 px-5 mt-3" href="">Explore More</a> -->
+        </div>
+        <div class="col-lg-6">
+          <div class="rounded overflow-hidden">
+            <div class="row g-0">
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="text-center bg-primary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/experience.png" alt="">
+                  <h1 class="display-6 text-white" data-toggle="counter-up">20</h1>
+                  <span class="fs-5 fw-semi-bold text-secondary">Years of Gardening</span>
+                </div>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="text-center bg-secondary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/award.png" alt="">
+                  <h1 class="display-6" data-toggle="counter-up">183</h1>
+                  <span class="fs-5 fw-semi-bold text-primary">Bountiful Harvests</span>
+                </div>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="text-center bg-secondary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/animal.png" alt="">
+                  <h1 class="display-6" data-toggle="counter-up">17</h1>
+                  <span class="fs-5 fw-semi-bold text-primary">Total Plant</span>
+                </div>
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                <div class="text-center bg-primary py-5 px-4">
+                  <img class="img-fluid mb-4" src="img/client.png" alt="">
+                  <h1 class="display-6 text-white" data-toggle="counter-up">6</h1>
+                  <span class="fs-5 fw-semi-bold text-secondary">Happy Housepeople</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Features End -->
+
+
+
+  <!-- Banner Start -->
+  <div class="container-fluid banner my-5 py-5" data-parallax="scroll" data-image-src="img/banner.jpg">
+    <div class="container py-5">
+      <!-- Content inside the banner -->
+      <h1 class="text-white">Enjoy exploring our gardens</h1>
+      <p class="text-white"></p>
+    </div>
+  </div>
+  <!-- Banner End -->
+
+  <!-- Product Start -->
+  <div class="container-xxl py-5" id="product">
+    <div class="container">
+      <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+        <p class="section-title bg-white text-center text-primary px-3">Our Garden</p>
+        <h1 class="mb-5">Have a look</h1>
+      </div>
+
+      <div class="row gx-4 gy-5">
+
+        <div class="col-md-12 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+          <a href="user.html">
+            <div class="product-item">
+              <div class="position-relative">
+                <img class="img-fluid" src="img/family.png" alt="">
+                <div class="product-overlay">
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <p class="d-block h5">House People</p>
+                <span class="text-primary me-1">Shows all people house people users that are a part of the system</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-12 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+          <a href="plant.html">
+            <div class="product-item">
+              <div class="position-relative">
+                <img class="product-item img-fluid" src="img/plants.png" alt="">
+                <div class="product-overlay">
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <p class="d-block h5">Plant</p>
+                <span class="text-primary me-1">Shows all types of plants that reside in all gardens</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-12 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+          <a href="garden.html">
+            <div class="product-item">
+              <div class="position-relative">
+                <img class="product-item img-fluid" src="img/gardens.png" alt="">
+                <div class="product-overlay">
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <p class="d-block h5">Garden</p>
+                <span class="text-primary me-1">Shows a list of all gardens</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-12 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+          <a href="water.html">
+            <div class="product-item">
+              <div class="position-relative">
+                <img class="product-item img-fluid" src="img/watering.png" alt="">
+                <div class="product-overlay">
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <p class="d-block h5">Water</p>
+                <span class="text-primary me-1">Shows all watering data for the plants</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-12 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+          <a href="harvest.html">
+            <div class="product-item">
+              <div class="position-relative">
+                <img class="product-item img-fluid" src="img/harvest.jpg" alt="">
+                <div class="product-overlay">
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <p class="d-block h5">Harvest</p>
+                <span class="text-primary me-1">Shows all the harvests that have occurred for plants</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  <!-- Product End -->
+
+
+
+  <!-- Copyright Start -->
+  <div class="container-fluid bg-secondary text-body copyright py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; <a class="fw-semi-bold" href="/">Garden APP - CPSC304</a>, All Right Reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          Website and Database Created By <span class="fw-semi-bold">Trevor Dang & Jessie Zhou & Poppy
+            Li</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright End -->
+
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/parallax/parallax.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
